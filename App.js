@@ -7,6 +7,7 @@ import Mapa from './src/Mapa'
 import ConcluindoMeta from './src/ConcluindoMeta'
 import DefinaSuaMeta from './src/DefinaSuaMeta'
 import MetasNaoCumpridas from './src/MetasNaoCumpridas'
+import Metas_dia from './src/Metas_dia'
 
 
 function HomeScreen({ navigation }) {
@@ -57,6 +58,8 @@ function App() {
          options={{ title: 'Defina sua Meta',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
          <Stack.Screen name="MetasNaoCumpridas" component={MetasNaoCumpridas}
          options={{ title: 'Metas Não Cumpridas',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Metas_dia" component={Metas_dia}
+         options={{ title: 'Metas para Hoje',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

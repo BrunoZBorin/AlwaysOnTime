@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/bruno/Desktop/Protótipo/AppTeste/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/home/bruno/Desktop/Protótipo/AlwaysOnTime/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "/home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/res/values-sw600dp-v13/values-sw600dp-v13.xml",

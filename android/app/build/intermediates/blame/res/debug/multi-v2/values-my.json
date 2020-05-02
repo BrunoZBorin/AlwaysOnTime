@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/bruno/Desktop/Protótipo/AppTeste/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml",
+            "outputFile": "/home/bruno/Desktop/Protótipo/AlwaysOnTime/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml",
             "map": [
                 {
                     "source": "/home/bruno/.gradle/caches/transforms-2/files-2.1/a38dce471a0e4dd70d13c7e463d72ea6/res/values-my/values-my.xml",

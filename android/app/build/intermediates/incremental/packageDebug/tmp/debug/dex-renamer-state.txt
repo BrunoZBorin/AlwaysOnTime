@@ -1,4 +1,4 @@
-#Wed Apr 15 15:28:21 BRT 2020
-base.0=/home/bruno/Desktop/Protótipo/AppTeste/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Sat May 02 13:49:01 BRT 2020
+base.0=/home/bruno/Desktop/Protótipo/AlwaysOnTime/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 path.0=classes.dex
