@@ -1,0 +1,266 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:@react-native-community_datetimepicker] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:@react-native-community_async-storage] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:@react-native-community_masked-view] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-gesture-handler] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-safe-area-context] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/transforms-2/files-2.1/513a3482e4704985f126ed0183e10dc5/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/a38dce471a0e4dd70d13c7e463d72ea6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bd15cb11ec1cc87aa8f4911f25908be4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bca108e06938b83805ce6ee6b651bc2b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02] /home/bruno/.gradle/caches/transforms-2/files-2.1/1d19208d2f76e4d4104c7d066d390e3a/AndroidManifest.xml:17:1-24:12
+MERGED from [org.webkit:android-jsc:r245459] /home/bruno/.gradle/caches/transforms-2/files-2.1/e013df51ecab79f1131f2cdd10007079/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/77c6db5694d9407ed9dd5e81d3ea8c85/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff9bfb4a71158315534bd1106c3fa49e/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/40018c6d2161ef8141038b7658848e26/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bdcf37c6aa17c9b2b7f72f1e202484bf/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5585657e5a52b243f0e66468e934cddf/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b98e221e2fa15f4396cdf427c97268a7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/52e0c4e22436305b518e3b4346dc9218/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/26d795264197ae000a978194ed249167/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8ec494cb9a906f3cf011616fe196a6cb/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2226a5a15d064808a0be7c1db20e4912/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b1b19976c7d1fd05f9c33dac33790dd3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97b348062711ce5452d301bb8aa7e10e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/d43f133388ab878f78228b0bcfc65612/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/fd7cb932057264e0ee2fda55c3303e36/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/4b83347a81706027c1d0f5854cc7dc28/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2128e4513905243625e0daecc8f97fca/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c25b348d7114b24a2f7038143adf08e6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bdfdfb81bb0a96fcb7ab888c8f6cac4b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/56456ef8c718e383a6967e75192aa5ce/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/fc2732e758e2c876c409e00434cda700/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8ec7cbd98ca824ec96088bb3f2c9efe6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/db9f8adabb98ff31b680b4e783c36bcc/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/831cfc33bdeee2bd3749e4c4e6951e41/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97a2ed61451c46658d71b520a2c2e74e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/dac110dce764353cc38dc643ce99d8e2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/e07e80ce709b8d66a0d41e11914c2107/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/ccd3921afe005720ce4cad8efa132158/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/22c2f22fdd29bb6e582d6a5dcb504e94/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/3e1a2c8f916d333b96967ade0a16882f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/410183da05e5e14f8b9e6dffc2f8610f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/583c51b4e6414f84b577bd0becbd0f00/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/9f69f20a25e75c09746c2ef3f91a4070/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/f2d9041754a78f64dd494cd1df89da16/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2fac78f706468e8f073b808f53038231/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/94ae52447eaa55b1d5e7de15aa112185/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c048f8c5d06b5ad8d86ce975bd87f775/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:2:3-25
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:2:3-25
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:4:22-64
+application
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from [:@react-native-community_datetimepicker] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
+MERGED from [:@react-native-community_datetimepicker] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/transforms-2/files-2.1/513a3482e4704985f126ed0183e10dc5/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/transforms-2/files-2.1/513a3482e4704985f126ed0183e10dc5/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/26d795264197ae000a978194ed249167/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/26d795264197ae000a978194ed249167/AndroidManifest.xml:11:5-20
+MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/e07e80ce709b8d66a0d41e11914c2107/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/e07e80ce709b8d66a0d41e11914c2107/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:8:7-39
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:8:7-39
+	tools:ignore
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:7:75-114
+	android:roundIcon
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:10:7-52
+	tools:targetApi
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:7:54-74
+	android:icon
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:9:7-41
+	android:allowBackup
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:usesCleartextTraffic
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:7:18-53
+	android:name
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:7:7-38
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:7:7-38
+activity#com.appteste.MainActivity
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:13:7-22:18
+	android:label
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:windowSoftInputMode
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:17:9-51
+	android:configChanges
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:16:9-79
+	android:name
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:18:9-21:25
+action#android.intent.action.MAIN
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:19:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:20:13-73
+	android:name
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:20:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:23:7-84
+	android:name
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml:23:17-81
+uses-sdk
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml
+MERGED from [:@react-native-community_datetimepicker] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:@react-native-community_datetimepicker] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:@react-native-community_async-storage] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:@react-native-community_async-storage] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:@react-native-community_masked-view] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:@react-native-community_masked-view] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-safe-area-context] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /home/bruno/Desktop/Protótipo/AppTeste/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/transforms-2/files-2.1/513a3482e4704985f126ed0183e10dc5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/transforms-2/files-2.1/513a3482e4704985f126ed0183e10dc5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/a38dce471a0e4dd70d13c7e463d72ea6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/a38dce471a0e4dd70d13c7e463d72ea6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bd15cb11ec1cc87aa8f4911f25908be4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bd15cb11ec1cc87aa8f4911f25908be4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bca108e06938b83805ce6ee6b651bc2b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bca108e06938b83805ce6ee6b651bc2b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02] /home/bruno/.gradle/caches/transforms-2/files-2.1/1d19208d2f76e4d4104c7d066d390e3a/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02] /home/bruno/.gradle/caches/transforms-2/files-2.1/1d19208d2f76e4d4104c7d066d390e3a/AndroidManifest.xml:20:5-22:41
+MERGED from [org.webkit:android-jsc:r245459] /home/bruno/.gradle/caches/transforms-2/files-2.1/e013df51ecab79f1131f2cdd10007079/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/bruno/.gradle/caches/transforms-2/files-2.1/e013df51ecab79f1131f2cdd10007079/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/77c6db5694d9407ed9dd5e81d3ea8c85/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/77c6db5694d9407ed9dd5e81d3ea8c85/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff9bfb4a71158315534bd1106c3fa49e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff9bfb4a71158315534bd1106c3fa49e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/40018c6d2161ef8141038b7658848e26/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/40018c6d2161ef8141038b7658848e26/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bdcf37c6aa17c9b2b7f72f1e202484bf/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bdcf37c6aa17c9b2b7f72f1e202484bf/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5585657e5a52b243f0e66468e934cddf/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5585657e5a52b243f0e66468e934cddf/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b98e221e2fa15f4396cdf427c97268a7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b98e221e2fa15f4396cdf427c97268a7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/52e0c4e22436305b518e3b4346dc9218/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/52e0c4e22436305b518e3b4346dc9218/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/26d795264197ae000a978194ed249167/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/26d795264197ae000a978194ed249167/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8ec494cb9a906f3cf011616fe196a6cb/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8ec494cb9a906f3cf011616fe196a6cb/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2226a5a15d064808a0be7c1db20e4912/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2226a5a15d064808a0be7c1db20e4912/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b1b19976c7d1fd05f9c33dac33790dd3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b1b19976c7d1fd05f9c33dac33790dd3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97b348062711ce5452d301bb8aa7e10e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97b348062711ce5452d301bb8aa7e10e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/d43f133388ab878f78228b0bcfc65612/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/d43f133388ab878f78228b0bcfc65612/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/fd7cb932057264e0ee2fda55c3303e36/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/fd7cb932057264e0ee2fda55c3303e36/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/4b83347a81706027c1d0f5854cc7dc28/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/4b83347a81706027c1d0f5854cc7dc28/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2128e4513905243625e0daecc8f97fca/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2128e4513905243625e0daecc8f97fca/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c25b348d7114b24a2f7038143adf08e6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c25b348d7114b24a2f7038143adf08e6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bdfdfb81bb0a96fcb7ab888c8f6cac4b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bdfdfb81bb0a96fcb7ab888c8f6cac4b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/56456ef8c718e383a6967e75192aa5ce/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/56456ef8c718e383a6967e75192aa5ce/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/fc2732e758e2c876c409e00434cda700/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/fc2732e758e2c876c409e00434cda700/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8ec7cbd98ca824ec96088bb3f2c9efe6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8ec7cbd98ca824ec96088bb3f2c9efe6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/db9f8adabb98ff31b680b4e783c36bcc/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/db9f8adabb98ff31b680b4e783c36bcc/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/831cfc33bdeee2bd3749e4c4e6951e41/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/831cfc33bdeee2bd3749e4c4e6951e41/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97a2ed61451c46658d71b520a2c2e74e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97a2ed61451c46658d71b520a2c2e74e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/dac110dce764353cc38dc643ce99d8e2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/dac110dce764353cc38dc643ce99d8e2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/e07e80ce709b8d66a0d41e11914c2107/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/e07e80ce709b8d66a0d41e11914c2107/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/ccd3921afe005720ce4cad8efa132158/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/ccd3921afe005720ce4cad8efa132158/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/22c2f22fdd29bb6e582d6a5dcb504e94/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/22c2f22fdd29bb6e582d6a5dcb504e94/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/3e1a2c8f916d333b96967ade0a16882f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/3e1a2c8f916d333b96967ade0a16882f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/410183da05e5e14f8b9e6dffc2f8610f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/410183da05e5e14f8b9e6dffc2f8610f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/583c51b4e6414f84b577bd0becbd0f00/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/583c51b4e6414f84b577bd0becbd0f00/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/9f69f20a25e75c09746c2ef3f91a4070/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/9f69f20a25e75c09746c2ef3f91a4070/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/f2d9041754a78f64dd494cd1df89da16/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/f2d9041754a78f64dd494cd1df89da16/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2fac78f706468e8f073b808f53038231/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/2fac78f706468e8f073b808f53038231/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/94ae52447eaa55b1d5e7de15aa112185/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/94ae52447eaa55b1d5e7de15aa112185/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c048f8c5d06b5ad8d86ce975bd87f775/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c048f8c5d06b5ad8d86ce975bd87f775/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /home/bruno/Desktop/Protótipo/AppTeste/android/app/src/debug/AndroidManifest.xml:5:22-75
