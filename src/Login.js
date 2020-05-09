@@ -1,100 +1,130 @@
 import React, { Component } from 'react';
-import AsyncStorage from '@react-native-community/async-storage';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Imagem from '../src/Imagem'
+import Mapa from '../src/Mapa'
+import ConcluindoMeta from '../src/ConcluindoMeta'
+import DefinaSuaMeta from '../src/DefinaSuaMeta'
+import MetasNaoCumpridas from './MetasNaoCumpridas'
+import Metas_dia from '../src/Metas_dia'
+import Metas_semana from '../src/Metas_semana'
+import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 
 
 import {
   StyleSheet,
+  Dimensions,
   View,
   Text,
-  TextInput,
+  FlatList,
   TouchableOpacity,
-  Alert
-  } from 'react-native';
+  ImageBackground,
+  Alert,
+  ScrollView
+} from 'react-native';
 
 
-
-class App extends Component {
-  
-  state={
-    idade:null,
-    imagem:null,
-    senha:null,
-    nome:null,
-    email:null,
-    gosto:null,
-    saldo:null,
-    data:null
-  }
-  getNome = async () =>{
-    let userId =[]
-    userId = await AsyncStorage.getItem('userNome')
-    if(userId===this.state.nome){
-      Alert.alert('Funcionou')
-      this.props.navigation.replace('Kanban')
-    }else{
-      Alert.alert('Tente novamente')
+class Login extends Component {
+    state={
+      isSigninInProgress:null    
     }
-    console.log(userId)
-  }  
-  
-  
-  
-  render(){
-  return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-          <Text style={styles.title}>Digite seu email</Text>
-          <TextInput
-            placeholder={'E-mail'}
-            onChangeText={nome=>this.setState({nome})}
-            value={this.state.nome}
-            style={{height:50, color:'white', borderBottomWidth: 1,
-            borderBottomColor: 'white',
-            fontSize: 15,width:200
-            }}
-          />
-          <Text style={styles.title}>Digite sua senha</Text>
-          <TextInput
-            placeholder={'Password'}
-            onChangeText={senha=>this.setState({senha})}
-            value={this.state.senha}
-            style={{height:50, color:'white', borderBottomWidth: 1,
-            borderBottomColor: 'white',
-            fontSize: 15,width:200
-            }}
-          /><TouchableOpacity onPress={()=>this.getNome()}>
-              <Text style={styles.texto}>Login</Text>
-            </TouchableOpacity>
-        
-        </View>
+    
+
+signIn = async () => {
+  try {
+    await GoogleSignin.hasPlayServices();
+    const userInfo = await GoogleSignin.signIn();
+    this.setState({ userInfo });
+  } catch (error) {
+    if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+      // user cancelled the login flow
+    } else if (error.code === statusCodes.IN_PROGRESS) {
+      // operation (f.e. sign in) is in progress already
+    } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+      // play services not available or outdated
+    } else {
+      // some other error happened
+    }
+  }
+};
       
-     
-    </View>
-    ) 
+render(){ 
+  
+    
+  const Stack = createStackNavigator();
+  return (
+    <View style={{height:altura, backgroundColor:'#000000', justifyContent:'center', alignItems:'center' }}>
+      <ImageBackground source={require('../images/lontra.png')} style={{width:largura, height:400, position:'absolute', top:-50}}/>
+      <GoogleSigninButton
+      style={{ width: 192, height: 48 }}
+      size={GoogleSigninButton.Size.Wide}
+      color={GoogleSigninButton.Color.Light}
+      onPress={this.signIn}
+      disabled={this.state.isSigninInProgress} />       
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} 
+        options={{ title: 'Login',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="Imagem" component={Imagem}  
+        options={{ title: 'Concluindo Meta >> Imagem',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="Mapa" component={Mapa}
+        options={{ title: 'Concluindo Meta >> Mapa',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }} />
+        <Stack.Screen name="ConcluindoMeta" component={ConcluindoMeta}
+         options={{ title: 'Concluindo Meta',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="DefinaSuaMeta" component={DefinaSuaMeta}
+         options={{ title: 'Defina sua Meta',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="MetasNaoCumpridas" component={MetasNaoCumpridas}
+         options={{ title: 'Metas Não Cumpridas',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Metas_dia" component={Metas_dia}
+         options={{ title: 'Metas para Hoje',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Metas_semana" component={Metas_semana}
+         options={{ title: 'Metas para essa semana',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         
+      </Stack.Navigator>
+    </NavigationContainer>
+      
+      </View>
+    )
+        
   }
 }
 
-const styles = StyleSheet.create({
- container:{
-   backgroundColor:'#0022cc',
-   height:'100%',
-   width:'100%'
- },
- title:{
-   color:'white',
-   fontSize:24
- },
- box:{
-   marginTop:100,
-   alignItems:'center',
-   alignContent:'center',
-  
- },
- texto:{
-   color:'white',
-   fontSize:20
- }
-});
+const largura = Dimensions.get('screen').width;
+const altura = Dimensions.get('screen').height;
 
-export default App;
+  const styles = StyleSheet.create({
+    container: {
+      alignItems: "center"
+    }
+  })
+
+export default Login;
+
+
+/*function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Imagem" component={Imagem}  
+        options={{ title: 'Concluindo Meta >> Imagem',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="Mapa" component={Mapa}
+        options={{ title: 'Concluindo Meta >> Mapa',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }} />
+        <Stack.Screen name="ConcluindoMeta" component={ConcluindoMeta}
+         options={{ title: 'Concluindo Meta',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="DefinaSuaMeta" component={DefinaSuaMeta}
+         options={{ title: 'Defina sua Meta',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="MetasNaoCumpridas" component={MetasNaoCumpridas}
+         options={{ title: 'Metas Não Cumpridas',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Metas_dia" component={Metas_dia}
+         options={{ title: 'Metas para Hoje',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Metas_semana" component={Metas_semana}
+         options={{ title: 'Metas para essa semana',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Login" component={Login}
+         options={{ title: 'Login',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;*/

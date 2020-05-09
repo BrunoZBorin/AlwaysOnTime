@@ -18,7 +18,6 @@ class MetasNaoCumpridas extends Component {
         data:[]
     }
 componentDidMount(){
-  console.log('AQQQQQUUUUIIIIII');
   this.loadProducts();
 }
 loadProducts = async () => {
