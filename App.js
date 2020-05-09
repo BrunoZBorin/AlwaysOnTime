@@ -11,21 +11,8 @@ import Metas_dia from './src/Metas_dia'
 import Metas_semana from './src/Metas_semana'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Drawer, Container, Header, Content,Button } from 'native-base';
-class SideBar extends Component {
-    
-    
-    render(){
-        
-        return (
-                <View style={[ styles.container, { backgroundColor: '#fff' } ]}>
-                        <Text>
-                            <Icon name="rocket" size={30} color="#900" />
-                            Conteúdo side bar
-                        </Text>
-                </View>
-               );
-    } 
-};
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import Login from './src/Login'
 
 function HomeScreen({ navigation }) {
   closeDrawer = () => {
@@ -33,16 +20,28 @@ function HomeScreen({ navigation }) {
 };
 openDrawer = () => {
     this.drawer._root.open()
-};   
+};  
+signIn = async () => {
+  try {
+    await GoogleSignin.hasPlayServices();
+    const userInfo = await GoogleSignin.signIn();
+    this.setState({ userInfo });
+  } catch (error) {
+    console.log(erro)
+  }
+};
 
+
+  state={
+    isSigninInProgress:null
+  }
+  
 
   const largura = Dimensions.get('screen').width;
   const altura = Dimensions.get('screen').height;
   return (
-    <Drawer
-    ref={(ref) => { this.drawer = ref; }}
-    content={<SideBar navigator={this.navigator} />}
-    onClose={() => this.closeDrawer()}>
+       
+    <Drawer>
     <Container>
     <Header>
         <Container style={{flexDirection: 'row'}}>
@@ -51,24 +50,18 @@ openDrawer = () => {
     </Header>
     <View style={{height:altura, backgroundColor:'#000000', justifyContent:'center', alignItems:'center' }}>
       <ImageBackground source={require('./images/lontra.png')} style={{width:largura, height:400, position:'absolute', top:-50}}/>
-        <View style={{height:250, width:300, backgroundColor:'white', marginTop:50}}>
-          <Text style={{fontSize:20, fontWeight:'bold', alignSelf:'center', marginTop:15}}>Set your e-mail to sign in</Text>
-          <View style={{flexDirection:'row', alignContent:"space-between", marginTop:170}}>
-            <View style={{left:10}}>
-              <TouchableOpacity>
-                <Text style={{color:'red', fontSize:20}}>CANCEL</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={{ right:-120}}>
-              <TouchableOpacity onPress={() => navigation.navigate('MetasNaoCumpridas')}>
-                <Text style={{color:'blue', fontSize:20}}>SIGN IN</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      <View style={{marginTop:100}}>
-        <Text style={{color:'white', fontSize:40}}>Bem Vindo</Text>
+      <GoogleSigninButton
+      style={{ width: 192, height: 48 }}
+      size={GoogleSigninButton.Size.Wide}
+      color={GoogleSigninButton.Color.Light}
+      onPress={this.signIn}
+      disabled={this.state.isSigninInProgress} /> 
+      <TouchableOpacity onPress={() => navigation.navigate('MetasNaoCumpridas')}>
+      <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:15, marginTop:70,
+          justifyContent: 'center', width:largura*.8, height:altura*.05}}>
+          <Text style = {{color: 'white'}}>Gravar</Text>
       </View>
+    </TouchableOpacity>
     </View>
     </Container>
       </Drawer>
@@ -97,6 +90,9 @@ function App() {
          options={{ title: 'Metas para Hoje',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
          <Stack.Screen name="Metas_semana" component={Metas_semana}
          options={{ title: 'Metas para essa semana',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Login" component={Login}
+         options={{ title: 'Login',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );

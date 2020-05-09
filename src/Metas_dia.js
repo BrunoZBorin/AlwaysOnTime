@@ -15,7 +15,7 @@ import {
 
 class Metas_dia extends Component {
     state={
-        data:[{
+        data:[/*{
           titulo:"Lavar loça",
           descricao:"A tarde"
         },
@@ -28,18 +28,19 @@ class Metas_dia extends Component {
           descricao:"Python"
         },
 
-        ]
+      */]
     }
 componentDidMount(){
-  console.log('AQQQQQUUUUIIIIII');
-  //this.loadProducts();
+  this.loadProducts();
 }
 loadProducts = async () => {
-  const response = await api.get('/metas').then((response)=>{
+  console.log('AQQQQQUUUUIIIIII');
+  const response = await api.get('/metas/dia').then((response)=>{
     res = response.data.docs
     console.log(res)
-    this.setState({counter:res.length,
-    data:res})
+    this.setState({
+      data:res
+    })
     
   }).catch((erro)=>{
     console.log(erro)

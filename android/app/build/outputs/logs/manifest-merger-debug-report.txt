@@ -9,6 +9,7 @@ MERGED from [:@react-native-community_datetimepicker] /home/bruno/Desktop/Protó
 MERGED from [:@react-native-community_async-storage] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:@react-native-community_masked-view] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-google-signin] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -16,6 +17,13 @@ MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/
 MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/a38dce471a0e4dd70d13c7e463d72ea6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bd15cb11ec1cc87aa8f4911f25908be4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/88fbcf71d31ad4991f69ba7086604755/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c145895fd2d333fdb2257df2aae293d4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b972e4ddb8684b055a88b86ea4f47a2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b3e210e70c5f4439533dfb69996f4223/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bca108e06938b83805ce6ee6b651bc2b/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02] /home/bruno/.gradle/caches/transforms-2/files-2.1/1d19208d2f76e4d4104c7d066d390e3a/AndroidManifest.xml:17:1-24:12
 MERGED from [org.webkit:android-jsc:r245459] /home/bruno/.gradle/caches/transforms-2/files-2.1/d043cd7e218df8b3237c8df6ea506156/AndroidManifest.xml:2:1-11:12
@@ -42,6 +50,7 @@ MERGED from [androidx.loader:loader:1.0.0] /home/bruno/.gradle/caches/transforms
 MERGED from [androidx.activity:activity:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8ec7cbd98ca824ec96088bb3f2c9efe6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/db9f8adabb98ff31b680b4e783c36bcc/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/831cfc33bdeee2bd3749e4c4e6951e41/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/aa9a2413af06b201e740d3647aba0be4/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97a2ed61451c46658d71b520a2c2e74e/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/dac110dce764353cc38dc643ce99d8e2/AndroidManifest.xml:17:1-22:12
@@ -90,6 +99,14 @@ MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/
 MERGED from [com.facebook.react:react-native:0.61.5] /home/bruno/.gradle/caches/transforms-2/files-2.1/c364497e4c2413cec9ced07e47b07c1d/AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/5683dc5326a9c72a2153fd7feaa175d1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b972e4ddb8684b055a88b86ea4f47a2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b972e4ddb8684b055a88b86ea4f47a2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:22:5-26:19
 MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/26d795264197ae000a978194ed249167/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/26d795264197ae000a978194ed249167/AndroidManifest.xml:11:5-20
 MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:24:5-89
@@ -158,6 +175,8 @@ MERGED from [:@react-native-community_masked-view] /home/bruno/Desktop/Protótip
 MERGED from [:@react-native-community_masked-view] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-google-signin] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-google-signin] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-safe-area-context] /home/bruno/Desktop/Protótipo/AlwaysOnTime/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -172,6 +191,20 @@ MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bruno/.gradle/caches/tran
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/a38dce471a0e4dd70d13c7e463d72ea6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bd15cb11ec1cc87aa8f4911f25908be4/AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bd15cb11ec1cc87aa8f4911f25908be4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/88fbcf71d31ad4991f69ba7086604755/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/88fbcf71d31ad4991f69ba7086604755/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c145895fd2d333fdb2257df2aae293d4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/c145895fd2d333fdb2257df2aae293d4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b972e4ddb8684b055a88b86ea4f47a2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b972e4ddb8684b055a88b86ea4f47a2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b3e210e70c5f4439533dfb69996f4223/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/b3e210e70c5f4439533dfb69996f4223/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bca108e06938b83805ce6ee6b651bc2b/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/bca108e06938b83805ce6ee6b651bc2b/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02] /home/bruno/.gradle/caches/transforms-2/files-2.1/1d19208d2f76e4d4104c7d066d390e3a/AndroidManifest.xml:20:5-22:41
@@ -224,6 +257,8 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bruno/.gradle/c
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/db9f8adabb98ff31b680b4e783c36bcc/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/831cfc33bdeee2bd3749e4c4e6951e41/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/831cfc33bdeee2bd3749e4c4e6951e41/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/aa9a2413af06b201e740d3647aba0be4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/aa9a2413af06b201e740d3647aba0be4/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.1.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/8b5b7d1507c4bb80e10cf17705754cae/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bruno/.gradle/caches/transforms-2/files-2.1/97a2ed61451c46658d71b520a2c2e74e/AndroidManifest.xml:20:5-44
@@ -264,3 +299,35 @@ uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from /home/bruno/Desktop/Protótipo/AlwaysOnTime/android/app/src/debug/AndroidManifest.xml:5:5-77
 	android:name
 		ADDED from /home/bruno/Desktop/Protótipo/AlwaysOnTime/android/app/src/debug/AndroidManifest.xml:5:22-75
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/684535ede053ea5743100126f5259a61/AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/e935efabc40649e6b34a9ed58b2baeb7/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/bruno/.gradle/caches/transforms-2/files-2.1/ff990072b487c09183c9cd0e623ff26b/AndroidManifest.xml:24:13-58
