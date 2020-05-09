@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { View, Text, TouchableOpacity, Dimensions, ImageBackground} from 'react-native';
+import React,{Component} from 'react';
+import { View, Text, TouchableOpacity, Dimensions, ImageBackground, StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Imagem from './src/Imagem'
@@ -8,14 +8,47 @@ import ConcluindoMeta from './src/ConcluindoMeta'
 import DefinaSuaMeta from './src/DefinaSuaMeta'
 import MetasNaoCumpridas from './src/MetasNaoCumpridas'
 import Metas_dia from './src/Metas_dia'
-
+import Metas_semana from './src/Metas_semana'
+import Icon from 'react-native-vector-icons/FontAwesome';
+import {Drawer, Container, Header, Content,Button } from 'native-base';
+class SideBar extends Component {
+    
+    
+    render(){
+        
+        return (
+                <View style={[ styles.container, { backgroundColor: '#fff' } ]}>
+                        <Text>
+                            <Icon name="rocket" size={30} color="#900" />
+                            Conteúdo side bar
+                        </Text>
+                </View>
+               );
+    } 
+};
 
 function HomeScreen({ navigation }) {
+  closeDrawer = () => {
+    this.drawer._root.close()
+};
+openDrawer = () => {
+    this.drawer._root.open()
+};   
 
 
   const largura = Dimensions.get('screen').width;
   const altura = Dimensions.get('screen').height;
   return (
+    <Drawer
+    ref={(ref) => { this.drawer = ref; }}
+    content={<SideBar navigator={this.navigator} />}
+    onClose={() => this.closeDrawer()}>
+    <Container>
+    <Header>
+        <Container style={{flexDirection: 'row'}}>
+                <Icon onPress={() => this.openDrawer()} name="bars" size={30} color="#fff" />
+        </Container>
+    </Header>
     <View style={{height:altura, backgroundColor:'#000000', justifyContent:'center', alignItems:'center' }}>
       <ImageBackground source={require('./images/lontra.png')} style={{width:largura, height:400, position:'absolute', top:-50}}/>
         <View style={{height:250, width:300, backgroundColor:'white', marginTop:50}}>
@@ -37,6 +70,8 @@ function HomeScreen({ navigation }) {
         <Text style={{color:'white', fontSize:40}}>Bem Vindo</Text>
       </View>
     </View>
+    </Container>
+      </Drawer>
   );
 }
 
@@ -60,9 +95,28 @@ function App() {
          options={{ title: 'Metas Não Cumpridas',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
          <Stack.Screen name="Metas_dia" component={Metas_dia}
          options={{ title: 'Metas para Hoje',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Metas_semana" component={Metas_semana}
+         options={{ title: 'Metas para essa semana',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
 export default App;

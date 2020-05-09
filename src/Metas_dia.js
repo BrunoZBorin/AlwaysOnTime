@@ -15,17 +15,29 @@ import {
 
 class Metas_dia extends Component {
     state={
-        data:[]
+        data:[{
+          titulo:"Lavar loça",
+          descricao:"A tarde"
+        },
+        {
+          titulo:"Correr",
+          descricao:"No bosque"
+        },
+        {
+          titulo:"Estudar",
+          descricao:"Python"
+        },
+
+        ]
     }
-async componentDidMount(){
+componentDidMount(){
   console.log('AQQQQQUUUUIIIIII');
-  this.loadProducts();
+  //this.loadProducts();
 }
 loadProducts = async () => {
-  console.log('aaaabbbbaaaaa')
-  const response = await api.get('/metas/dia').then((response)=>{
+  const response = await api.get('/metas').then((response)=>{
     res = response.data.docs
-    console.log(response.data)
+    console.log(res)
     this.setState({counter:res.length,
     data:res})
     
@@ -43,18 +55,21 @@ render(){
             keyExtractor={item => item.id}
             renderItem={({ item }) => {
               return (
+                <TouchableOpacity>
+                <View style={{width:largura*0.9, height:2, backgroundColor:'black'}}/>
                 <View style={{flexDirection:'row', marginTop:30, justifyContent:'flex-start'}}>
                   <Image style={{height:30, width:30, marginRight:30}}source={require('../images/estrelaCheiaDourada.png')}/>
                     <View style={{marginRight:20}}>
                       <Text style={{fontWeight:'bold'}}> Meta {item.id}: {item.titulo}</Text>
-                      <Text>{item.descricao}</Text>
-                      <Text>{item.dataTerm}</Text>
+                      <Text style={{marginBottom:20}}>Descrição {item.descricao}</Text>
                     </View>
                 </View>
+                </TouchableOpacity>
                 );
               }}
           />
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('DefinaSuaMeta')}>
+          <View style={{width:largura*0.9, height:2, backgroundColor:'black'}}/>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Metas_semana')}>
                     <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:15, marginTop:70,
                         justifyContent: 'center', width:largura*.8, height:altura*.05}}>
                         <Text style = {{color: 'white'}}>Gravar</Text>
