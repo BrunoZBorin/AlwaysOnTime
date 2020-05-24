@@ -19,7 +19,7 @@ const DefinaSuaMeta = ({navigation}) =>{
   this.state = {
     titulo:null,
     descricao: null,
-    dataTermino:null
+    dataTermino:null,
   }
 
 checkNextStep = async () => {
@@ -53,7 +53,7 @@ checkNextStep = async () => {
                 style={{ width:largura*.8,height: 40, borderBottomColor: 'blue', borderBottomWidth: 1 }}
                 value={this.state.titulo}
                 onChangeText={titulo => this.setState({titulo})}
-                placeholder={'titulo'}
+                placeholder={'Título'}
             />
             <Text style={{marginTop:30}}>Descrição</Text>
             <TextInput
@@ -63,18 +63,17 @@ checkNextStep = async () => {
                 value={this.state.descricao}
                 style={{ width:largura*.8,height: 120, borderBottomColor: 'blue', borderBottomWidth: 1 }}
                 placeholder={'Descrição'}
-                
-                
-          
-              
             />
-        </View>
-        <Text style={{marginTop:10, left:-10}}>Prazo</Text>
+        <Text style={{marginTop:10}}>Prazo</Text>
         <View>
         <TouchableOpacity onPress={showDatePicker}>
             <View style = {{backgroundColor: '#FF8000', alignItems: 'center', marginRight:15, marginTop:10,
             borderRadius:50,  justifyContent: 'center', width:largura*.4, height:altura*.05}}>
-                    <Text style = {{color: 'white'}}>Escolha uma data</Text>
+            {this.state.dataTermino&&(<Text style = {{color: 'white'}}>
+                       {date.toString(this.state.dataTermino)}
+                    </Text>)(
+                      <Text>Data</Text>
+                    )}
             </View>
             <DateTimePickerModal
                 isVisible={isDatePickerVisible}
@@ -90,6 +89,7 @@ checkNextStep = async () => {
                     <Text style = {{color: 'white'}}>Gravar</Text>
                 </View>
             </TouchableOpacity>
+            </View>
     </View>
     ) 
   }

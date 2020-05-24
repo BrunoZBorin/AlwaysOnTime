@@ -1,16 +1,78 @@
-import React from 'react';
-import { createDrawerNavigator }  from 'react-navigation';
-import ConcluindoMeta from './src/ConcluindoMeta'
-import DefinaSuaMeta from './src/DefinaSuaMeta'
-import MetasNaoCumpridas from './src/MetasNaoCumpridas'
-import Metas_dia from './src/Metas_dia'
+import React, { Component } from 'react'
+import {createDrawerNavigator} from 'react-navigation-drawer';
+import { createAppContainer } from 'react-navigation'
+import ConcluindoMeta from './ConcluindoMeta'
+import DefinaSuaMeta from './DefinaSuaMeta'
+import Metas_semana from './Metas_semana'
+import Metas_dia from './Metas_dia'
+import Metas_mes from './Metas_mes'
+import Nao_Cumpridas from './MetasNaoCumpridas'
+import Imagem from './Imagem'
+import Mapa from './Mapa'
 
-export default createDrawerNavigator({
+import {
+  StyleSheet,
+  Dimensions,
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  Image,
+  Alert,
+  ScrollView
+} from 'react-native';
+class Menu extends Component {
+
+      
+render(){        
+  return (    
+    <SideMenu/>
+    )
+  }
+}
+const DrawerNavigator = createDrawerNavigator({
+  
+Definindo :{
+    screen:DefinaSuaMeta,
     
-        ConcluindoMeta:{
-                screen:()=><ConcluindoMeta/>,
-                navigationOptions: {title: "Concluindo Meta"}
-            },
-       
+},
+Concluindo :{
+  screen:ConcluindoMeta
+  
+},
+Mes :{
+    screen:Metas_mes,
+    
+},
+Semana :{
+  screen:Metas_semana,
+  
+},
+Dia :{
+  screen:Metas_dia,
+  
+},
+Foto :{
+  screen:Imagem,
+  
+},
+Mapa :{
+  screen:Mapa,
+  
+},
+Não_Cumpridas :{
+  screen:Nao_Cumpridas,
+  
+}
+})
+const SideMenu = createAppContainer(DrawerNavigator);
 
-}, {drawerWidth:300 })
+const largura = Dimensions.get('screen').width;
+const altura = Dimensions.get('screen').height;
+
+  const styles = StyleSheet.create({
+    container: {
+      alignItems: "center"
+    }
+  })
+  export default Menu;
