@@ -2,30 +2,26 @@ import React,{Component} from 'react';
 import { View, Text, TouchableOpacity, Dimensions, ImageBackground, StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Menu from './src/Menu'
 import Imagem from './src/Imagem'
 import Mapa from './src/Mapa'
 import ConcluindoMeta from './src/ConcluindoMeta'
 import DefinaSuaMeta from './src/DefinaSuaMeta'
 import MetasNaoCumpridas from './src/MetasNaoCumpridas'
 import Metas_dia from './src/Metas_dia'
+import Metas_mes from './src/Metas_mes'
 import Metas_semana from './src/Metas_semana'
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {Drawer, Container, Header, Content,Button } from 'native-base';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import Login from './src/Login'
+import DrawerNavigator from './DrawerNavigator';
 
 function HomeScreen({ navigation }) {
-  closeDrawer = () => {
-    this.drawer._root.close()
-};
-openDrawer = () => {
-    this.drawer._root.open()
-};  
 signIn = async () => {
   try {
     await GoogleSignin.hasPlayServices();
     const userInfo = await GoogleSignin.signIn();
     this.setState({ userInfo });
+    
   } catch (error) {
     console.log(erro)
   }
@@ -41,31 +37,19 @@ signIn = async () => {
   const altura = Dimensions.get('screen').height;
   return (
        
-    <Drawer>
-    <Container>
-    <Header>
-        <Container style={{flexDirection: 'row'}}>
-                <Icon onPress={() => this.openDrawer()} name="bars" size={30} color="#fff" />
-        </Container>
-    </Header>
+    
     <View style={{height:altura, backgroundColor:'#000000', justifyContent:'center', alignItems:'center' }}>
+      
       <ImageBackground source={require('./images/lontra.png')} style={{width:largura, height:400, position:'absolute', top:-50}}/>
       <GoogleSigninButton
       style={{ width: 192, height: 48 }}
       size={GoogleSigninButton.Size.Wide}
       color={GoogleSigninButton.Color.Light}
-      onPress={this.signIn}
+      onPress={this.signIn,() => navigation.navigate('Menu')}
       disabled={this.state.isSigninInProgress} /> 
-      <TouchableOpacity onPress={() => navigation.navigate('MetasNaoCumpridas')}>
-      <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:15, marginTop:70,
-          justifyContent: 'center', width:largura*.8, height:altura*.05}}>
-          <Text style = {{color: 'white'}}>Gravar</Text>
-      </View>
-    </TouchableOpacity>
+      
     </View>
-    </Container>
-      </Drawer>
-  );
+      );
 }
 
 const Stack = createStackNavigator();
@@ -90,8 +74,12 @@ function App() {
          options={{ title: 'Metas para Hoje',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
          <Stack.Screen name="Metas_semana" component={Metas_semana}
          options={{ title: 'Metas para essa semana',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Metas_mes" component={Metas_mes}
+         options={{ title: 'Metas para esse mes',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
          <Stack.Screen name="Login" component={Login}
          options={{ title: 'Login',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Menu" component={Menu}
+         options={{ title: "Menu",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -13,7 +13,7 @@ import {
   ScrollView
 } from 'react-native';
 
-class Metas_dia extends Component {
+class Metas_semana extends Component {
     state={
         data:[{
           titulo:"Criar um app",
@@ -90,4 +90,4 @@ const altura = Dimensions.get('screen').height;
       alignItems: "center"
     }
   })
-  export default Metas_dia
+  export default Metas_semana

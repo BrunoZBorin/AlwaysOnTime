@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import api from './services/api'
-
 import {
   StyleSheet,
   Dimensions,
@@ -12,10 +11,11 @@ import {
   Alert,
   ScrollView
 } from 'react-native';
-
 class Metas_dia extends Component {
-    state={
-        data:[/*{
+
+
+  state={
+        data:[{
           titulo:"Lavar loça",
           descricao:"A tarde"
         },
@@ -28,29 +28,18 @@ class Metas_dia extends Component {
           descricao:"Python"
         },
 
-      */]
+      ]
     }
+
 componentDidMount(){
-  this.loadProducts();
-}
-loadProducts = async () => {
-  console.log('AQQQQQUUUUIIIIII');
-  const response = await api.get('/metas/dia').then((response)=>{
-    res = response.data.docs
-    console.log(res)
-    this.setState({
-      data:res
-    })
-    
-  }).catch((erro)=>{
-    console.log(erro)
-  });
+
 }
       
 render(){        
   return (
+    
     <View style={styles.container}>
-          <Text style={{fontSize:30}}>{this.state.counter}</Text>
+        <Text style={{fontSize:30}}>{this.state.counter}</Text>
           <FlatList
             data={this.state.data}
             keyExtractor={item => item.id}
@@ -70,6 +59,7 @@ render(){
               }}
           />
           <View style={{width:largura*0.9, height:2, backgroundColor:'black'}}/>
+          
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Metas_semana')}>
                     <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:15, marginTop:70,
                         justifyContent: 'center', width:largura*.8, height:altura*.05}}>
