@@ -7,7 +7,6 @@ use Slim\App;
 use Slim\Interfaces\RouteCollectorProxyInterface as Group;
 
 return function (App $app) {
-    require __DIR__ . '/../src/Card.php';
-    require __DIR__ . '/../src/Jogo.php';
-    require __DIR__ . '/../src/Venda.php';
+    require __DIR__ . '/../src/Meta.php';
+    require __DIR__ . '/../src/Usuario.php';
 };

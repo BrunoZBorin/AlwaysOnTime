@@ -1,118 +1,139 @@
-import React, { Component, useState } from 'react'
+import React, {useState} from 'react';
+import {Button, Platform} from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import { TextInput } from 'react-native';
 import api from './services/api'
-
-import DateTimePickerModal from "react-native-modal-datetime-picker";
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import {
   StyleSheet,
+  Dimensions,
   View,
   Text,
-  TextInput,
-  Dimensions,
-  Button,
+  FlatList,
   TouchableOpacity,
+  Image,
   Alert,
+  ScrollView
 } from 'react-native';
 
+export default function DefinaSuaMeta({navigation}) {
+  const [titulo, onChangeTextTitulo] = React.useState('');
+  const [descricao, onChangeTextDescricao] = React.useState('');
+  const [date, setDate] = useState(new Date(1598051730000));
+  const [mode, setMode] = useState('date');
+  const [show, setShow] = useState(false);
 
-const DefinaSuaMeta = ({navigation}) =>{
+  gravar = async () =>{
+    if(titulo.trim() == "")
+      return alert("Informe o título.");
+    if(String(date).trim() == "")
+      return alert("Informe o prazo.");
 
-  this.state = {
-    titulo:null,
-    descricao: null,
-    dataTermino:null,
+    const currentUser = await GoogleSignin.getCurrentUser();
+
+    let data = date.getFullYear() + "-" + (String(date.getMonth()+1).length == 1 ? "0"+String(date.getMonth()+1) : (date.getMonth()+1)) + "-" + (String(date.getDate()).length == 1 ? "0"+String(date.getDate()) : (date.getDate()));
+    
+    var objAux = {
+      idtoken: currentUser["idToken"],
+      prazo: data,
+      descricao: descricao,
+      titulo: titulo
+    }
+  
+    await api.get('meta/gravar', {params:objAux}).then((response) => {
+        if(response.data.retorno == "OK") {
+          navigation.navigate('Menu')
+        }
+        else
+        {                       
+          console.log(response.data)
+        }
+    }).catch(error => {
+        console.log(error)
+    });
   }
 
-checkNextStep = async () => {
-  const res = await api.post('/metas',{ titulo:this.state.titulo, descricao:this.state.descricao, dataTermino:this.state.dataTermino})
-  navigation.navigate('ConcluindoMeta')
-  console.log(res);
-
-
-}
-  
-  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
-
-  const showDatePicker = () => {
-    setDatePickerVisibility(true);
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate || date;
+    setShow(Platform.OS === 'ios');
+    setDate(currentDate);
   };
 
-  const hideDatePicker = () => {
-    setDatePickerVisibility(false);
+  const showMode = currentMode => {
+    setShow(true);
+    setMode(currentMode);
   };
 
-  const handleConfirm = date => {
-    this.setState({dataTermino:date})
-    Alert.alert("A data escolhida é: ", date.toString());
-    hideDatePicker();
+  const showDatepicker = () => {
+    showMode('date');
   };
- return (
+
+  return (
     <View style={styles.container}>
-        <View style={styles.body}>
-            <Text style={{marginTop:30}}>Titulo</Text>
-            <TextInput
-                style={{ width:largura*.8,height: 40, borderBottomColor: 'blue', borderBottomWidth: 1 }}
-                value={this.state.titulo}
-                onChangeText={titulo => this.setState({titulo})}
-                placeholder={'Título'}
-            />
-            <Text style={{marginTop:30}}>Descrição</Text>
-            <TextInput
-                onChangeText={descricao => {
-                  this.setState({descricao})
-                }}
-                value={this.state.descricao}
-                style={{ width:largura*.8,height: 120, borderBottomColor: 'blue', borderBottomWidth: 1 }}
-                placeholder={'Descrição'}
-            />
-        <Text style={{marginTop:10}}>Prazo</Text>
+      <View style={styles.body}>
+        <Text style={{marginTop:30}}>Título</Text>
+        <TextInput
+          style={{width:largura*.8, height: 40, borderBottomColor: 'blue', borderBottomWidth: 1}}
+          onChangeText={text => onChangeTextTitulo(text)}
+          value={titulo}
+        />
+        <Text style={{marginTop:30}}>Descrição</Text>
+        <TextInput
+          style={{width:largura*.8, height: 120, borderBottomColor: 'blue', borderBottomWidth: 1}}
+          onChangeText={text => onChangeTextDescricao(text)}
+          value={descricao}
+        />
+
+        <Text style={{marginTop:30}}>Prazo</Text>
         <View>
-        <TouchableOpacity onPress={showDatePicker}>
-            <View style = {{backgroundColor: '#FF8000', alignItems: 'center', marginRight:15, marginTop:10,
-            borderRadius:50,  justifyContent: 'center', width:largura*.4, height:altura*.05}}>
-            {this.state.dataTermino&&(<Text style = {{color: 'white'}}>
-                       {date.toString(this.state.dataTermino)}
-                    </Text>)(
-                      <Text>Data</Text>
-                    )}
-            </View>
-            <DateTimePickerModal
-                isVisible={isDatePickerVisible}
-                mode="date"
-                onConfirm={handleConfirm}
-                onCancel={hideDatePicker}
-            />
-        </TouchableOpacity>
+          <Button onPress={showDatepicker} title={(String(date.getDate()).length == 1 ? "0"+String(date.getDate()) : (date.getDate())) + "/" + (String(date.getMonth()+1).length == 1 ? "0"+String(date.getMonth()+1) : (date.getMonth()+1)) + "/" + date.getFullYear()} />
         </View>
-            <TouchableOpacity onPress={() => this.checkNextStep()}>
-                <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:15, marginTop:70,
-                     justifyContent: 'center', width:largura*.8, height:altura*.05}}>
-                    <Text style = {{color: 'white'}}>Gravar</Text>
+        {show && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            timeZoneOffsetInMinutes={0}
+            value={date}
+            mode={mode}
+            is24Hour={true}
+            display="default"
+            onChange={onChange}
+          />
+        )}
+        <View style={{flexDirection:'row', marginTop:80}}>
+            <TouchableOpacity onPress={() => navigation.navigate('Imagem')}>
+                <View style = {{backgroundColor: '#0099ff', alignItems: 'center', 
+                  justifyContent: 'center', width:largura*.4, height:altura*.05, marginRight:15}}>
+                <Text style = {{color: 'white'}}>Adicionar Imagem</Text>
                 </View>
             </TouchableOpacity>
-            </View>
-    </View>
-    ) 
-  }
+            <TouchableOpacity onPress={() => navigation.navigate('Mapa')}>
+                <View style = {{backgroundColor: '#0099ff', alignItems: 'center', marginRight:15,
+                  justifyContent: 'center', width:largura*.4, height:altura*.05}}>
+                <Text style = {{color: 'white'}}>Adicionar Localização</Text>
+                </View>
+            </TouchableOpacity>
+        </View>
 
+        <TouchableOpacity onPress={()=>this.gravar()}>
+          <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:0, marginTop:60, marginBottom:20,
+              justifyContent: 'center', width:largura*.8, height:altura*.05}}>
+              <Text style = {{color: 'white'}}>Gravar</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );  
+}
 
 const largura = Dimensions.get('screen').width;
 const altura = Dimensions.get('screen').height;
-const styles = StyleSheet.create({
-    
-    body:{
-      fontSize:20,
-      alignContent:'flex-start'
-    },
-    container:{
-      alignItems:'center',
-      width:'100%',
-      height:'100%',
-      backgroundColor:'white'
-    },
-    image:{
-      height:270,
-      width:270
-    }
-});
 
-export default DefinaSuaMeta
+const styles = StyleSheet.create({
+  body:{
+    fontSize:20,
+    alignContent:'flex-start'
+  },
+  container: {
+    alignItems: "center"
+  }
+})

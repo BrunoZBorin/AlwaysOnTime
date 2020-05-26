@@ -18,7 +18,7 @@ return function (ContainerBuilder $containerBuilder) {
                 'host'     => 'localhost',
                 'user'     => 'lucas',
                 'password' => '',
-                'dbname'   => 'eGoldBagDB',
+                'dbname'   => 'AlwaysOnTimeDB',
             ],
         ],
     ]);
