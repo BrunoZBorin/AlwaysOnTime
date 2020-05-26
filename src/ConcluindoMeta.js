@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import AsyncStorage from '@react-native-community/async-storage';
-import Marmotinha from '../images/marmotinha.png'
+import Marmotinha from '../images/marmotinha.png';
+import api from './services/api';
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import {
   StyleSheet,
   View,
@@ -14,7 +16,7 @@ import {
 
 
 class ConcluindoMeta extends Component {
-    
+  meta = "";
   
   Next=()=>{
     this.props.navigation.navigate('Perfil')
@@ -30,6 +32,27 @@ class ConcluindoMeta extends Component {
     this.props.navigation.navigate('Perfil')
     
   };
+
+  concluirMeta = async()=> {
+    const currentUser = await GoogleSignin.getCurrentUser();
+    
+    var objAux = {
+      idtoken: currentUser["idToken"],
+      idmeta: this.props.route.params.meta
+    }
+  
+    await api.get('meta/concluir', {params:objAux}).then((response) => {
+        if(response.data.retorno == "OK") {
+          this.props.navigation.navigate('Menu');
+        }
+        else
+        {                       
+          console.log(response.data)
+        }
+    }).catch(error => {
+        console.log(error)
+    });
+  }
   
  render(){
     
@@ -52,13 +75,13 @@ class ConcluindoMeta extends Component {
             </TouchableOpacity>
         </View>
         <View style={{flexDirection:'row', marginTop:80}}>
-            <TouchableOpacity onPress={() => navigation.navigate('ConcluindoMeta')}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Menu', {initial: false})}>
                 <View style = {{backgroundColor: '#ff0000', alignItems: 'center', 
                   justifyContent: 'center', width:largura*.4, height:altura*.05, marginRight:15}}>
                 <Text style = {{color: 'white'}}>Não</Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('ConcluindoMeta')}>
+            <TouchableOpacity onPress={this.concluirMeta}>
                 <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:15,
                   justifyContent: 'center', width:largura*.4, height:altura*.05}}>
                 <Text style = {{color: 'white'}}>Sim</Text>
