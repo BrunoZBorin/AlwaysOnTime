@@ -15,10 +15,10 @@ $app->get('/usuario', function (Request $request, Response $response) {
 
     $pdo = $this->get('PDO');
 
-    $sth = $pdo->prepare("SELECT id_usuario FROM usuario WHERE token_usuario = :idtoken");
+    $sth = $pdo->prepare("SELECT id_usuario FROM usuario WHERE email = :email");
     try
     {
-        $sth->bindValue("idtoken", $params["idtoken"]);
+        $sth->bindValue("email", $params["email"]);
         $sth->execute();
     }
     catch(PDOException $e)
@@ -30,6 +30,21 @@ $app->get('/usuario', function (Request $request, Response $response) {
     if($dados = $sth->fetch(PDO::FETCH_OBJ))
     {
         $resultado->dados = $dados;
+
+        $sth2 = $pdo->prepare("UPDATE usuario SET token_usuario = :idtoken, nome = :nome WHERE id_usuario = :idusuario");
+        try
+        {
+            $sth2->bindValue("idusuario", $dados->id_usuario);
+            $sth2->bindValue("idtoken", $params["idtoken"]);
+            $sth2->bindValue("nome", $params["nome"]);
+            $sth2->execute();
+        }
+        catch(PDOException $e)
+        {
+            $resultado->retorno = "ERRO";
+            $response->getBody()->write($e->getMessage());
+            return $response->withHeader('Content-Type', 'application/json');
+        }
     }
     else
     {
