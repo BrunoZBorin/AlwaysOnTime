@@ -12,6 +12,7 @@ import MetasNaoCumpridas from './src/MetasNaoCumpridas'
 import Metas_dia from './src/Metas_dia'
 import Metas_mes from './src/Metas_mes'
 import Metas_semana from './src/Metas_semana'
+import EditarMeta from './src/EditarMeta'
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import Login from './src/Login';
 import DrawerNavigator from './DrawerNavigator';
@@ -114,6 +115,8 @@ function App() {
           options={{ title: "Menu",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
         <Stack.Screen name="SideMenu" component={SideMenu}
           options={{ title: "SideMenu",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="EditarMeta" component={EditarMeta}
+          options={{ title: "EditarMeta",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
 
       </Stack.Navigator>
     </NavigationContainer>
