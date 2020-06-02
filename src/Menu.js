@@ -42,7 +42,7 @@ getMetaDiaria = async () => {
   var dt = new Date();
 
   const currentUser = await GoogleSignin.getCurrentUser();
-
+  
   var datainicio = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + dt.getDate();
   var datafim = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + dt.getDate();
 
@@ -56,6 +56,8 @@ getMetaDiaria = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
+        console.log('Aqui');
+        console.log(res);
         this.setState({counter:res.length, metadia:res})
       }
       else
@@ -124,6 +126,8 @@ getMetaMes = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
+        console.log('AQUI');
+        console.log(res);
         this.setState({counter:res.length, metames:res})
       }
       else
@@ -205,6 +209,7 @@ getMetaMes = async () => {
                     <Image style={{height:30, width:30, marginRight:30}}source={require('../images/estrelaCheiaDourada.png')}/>
                       <View style={{marginRight:20}}>
                         <Text style={{fontWeight:'bold'}}>Meta {item.id}: {item.titulo}</Text>
+                        <Text style={{fontWeight:'bold'}}>Prazo: {item.prazo}</Text>
                         <Text style={{marginBottom:20}}>Descrição {item.descricao}</Text>
                       </View>
                   </View>
@@ -219,10 +224,17 @@ getMetaMes = async () => {
                 <Text style = {{color: 'white'}}>Ver Todas</Text>
             </View>
           </TouchableOpacity>
+          <Text style={{fontSize:26, paddingTop:"2%", color:"blue"}}>Metas para Não Cumpridas</Text>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('MetasNaoCumpridas')}>
+            <View style = {{backgroundColor: 'blue', alignItems: 'center', marginRight:15, marginTop:2,
+                justifyContent: 'center', width:largura*.8, height:altura*.05}}>
+                <Text style = {{color: 'white'}}>Acessar</Text>
+            </View>
+          </TouchableOpacity>
           <TouchableOpacity onPress={()=>this.props.navigation.navigate('DefinaSuaMeta')}
           style={{marginTop:20}}>
             <Image source={require('../images/botaoMais.png')} style={{height:70, width:70}}/>
-            <Text style={{color: 'blue', left:-15}}>Adicionar Meta</Text>
+            <Text style={{color: 'blue', left:-15}}>Adicionar Meta</Text> 
           </TouchableOpacity>
           <TouchableOpacity onPress={()=>this.signOut() }>
             <View style = {{backgroundColor: '#bbbbc8', alignItems: 'center', marginRight:15, marginTop:70, marginBottom:20,
