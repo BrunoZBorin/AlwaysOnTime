@@ -58,23 +58,10 @@ class ConcluindoMeta extends Component {
     
  return (
     <View style={styles.container}>
+      <Text style={{marginTop:10}}></Text>
         <Text style={styles.title}>Concluiu sua meta?</Text>
         <Image style={styles.image} source={Marmotinha}/>
-        <View style={{flexDirection:'row', marginTop:80}}>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Imagem')}>
-                <View style = {{backgroundColor: '#0099ff', alignItems: 'center', 
-                  justifyContent: 'center', width:largura*.4, height:altura*.05, marginRight:15}}>
-                <Text style = {{color: 'white'}}>Adicionar Imagem</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Mapa')}>
-                <View style = {{backgroundColor: '#0099ff', alignItems: 'center', marginRight:15,
-                  justifyContent: 'center', width:largura*.4, height:altura*.05}}>
-                <Text style = {{color: 'white'}}>Adicionar Localização</Text>
-                </View>
-            </TouchableOpacity>
-        </View>
-        <View style={{flexDirection:'row', marginTop:80}}>
+        <View style={{flexDirection:'row', marginTop:30}}>
             <TouchableOpacity onPress={() => this.props.navigation.navigate('Menu', {initial: false})}>
                 <View style = {{backgroundColor: '#ff0000', alignItems: 'center', 
                   justifyContent: 'center', width:largura*.4, height:altura*.05, marginRight:15}}>

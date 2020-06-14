@@ -23,7 +23,7 @@ export default function DefinaSuaMeta({navigation}) {
   const [mode, setMode] = useState('date');
   const [show, setShow] = useState(false);
 
-  gravar = async () =>{
+  const gravar = async () =>{
     if(titulo.trim() == "")
       return alert("Informe o título.");
     if(String(date).trim() == "")
@@ -46,10 +46,10 @@ export default function DefinaSuaMeta({navigation}) {
         }
         else
         {                       
-          console.log(response.data)
+          alert(response.data)
         }
     }).catch(error => {
-        console.log(error)
+        alert(error)
     });
   }
 
@@ -99,22 +99,8 @@ export default function DefinaSuaMeta({navigation}) {
             onChange={onChange}
           />
         )}
-        <View style={{flexDirection:'row', marginTop:80}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Imagem')}>
-                <View style = {{backgroundColor: '#0099ff', alignItems: 'center', 
-                  justifyContent: 'center', width:largura*.4, height:altura*.05, marginRight:15}}>
-                <Text style = {{color: 'white'}}>Adicionar Imagem</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Mapa')}>
-                <View style = {{backgroundColor: '#0099ff', alignItems: 'center', marginRight:15,
-                  justifyContent: 'center', width:largura*.4, height:altura*.05}}>
-                <Text style = {{color: 'white'}}>Adicionar Localização</Text>
-                </View>
-            </TouchableOpacity>
-        </View>
 
-        <TouchableOpacity onPress={()=>this.gravar()}>
+        <TouchableOpacity onPress={()=>gravar()}>
           <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:0, marginTop:60, marginBottom:20,
               justifyContent: 'center', width:largura*.8, height:altura*.05}}>
               <Text style = {{color: 'white'}}>Gravar</Text>

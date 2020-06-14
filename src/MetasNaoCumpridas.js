@@ -38,8 +38,9 @@ getMeta = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
-        console.log('AQUI');
-        console.log(res);
+        for(var i in res){
+          res[i].prazo = res[i].prazo.split('-').reverse().join('/');
+        }
         this.setState({counter:res.length, data:res})
       }
       else
@@ -62,7 +63,7 @@ render(){
             keyExtractor={item => item.id}
             renderItem={({ item }) => {
               return (
-                <TouchableOpacity onPress={()=>this.props.navigation.replace('EditarMeta',{item})}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ConcluindoMeta', {meta: item.id_meta})}>
                 <View style={{width:largura*0.9, height:2, backgroundColor:'black'}}/>
                 <View style={{flexDirection:'row', marginTop:30, justifyContent:'flex-start'}}>
                   <Image style={{height:30, width:30, marginRight:30}}source={require('../images/estrelaCheiaDourada.png')}/>

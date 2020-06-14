@@ -26,6 +26,7 @@ import {
 } from 'react-native';
 
 class Menu extends Component {
+	idusuario = "";
   state = {
       metadia: [],
       metasemana: [],
@@ -43,10 +44,10 @@ getMetaDiaria = async () => {
 
   const currentUser = await GoogleSignin.getCurrentUser();
   
-  var datainicio = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + dt.getDate();
-  var datafim = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + dt.getDate();
+  var datainicio = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + (String(dt.getDate()).length == 1 ? "0"+String(dt.getDate()) : (dt.getDate()));
+  var datafim = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + (String(dt.getDate()).length == 1 ? "0"+String(dt.getDate()) : (dt.getDate()));
 
-  var condicao = " AND prazo >= '" + datainicio + "' AND prazo <= '" + datafim + "' ORDER BY prazo DESC LIMIT 2";
+  var condicao = " AND prazo >= '" + datainicio + "' AND prazo <= '" + datafim + "' ORDER BY prazo DESC LIMIT 2 ";
 
   var objAux = {
     idtoken: currentUser["idToken"],
@@ -56,8 +57,9 @@ getMetaDiaria = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
-        console.log('Aqui');
-        console.log(res);
+        for(var i in res){
+          res[i].prazo = res[i].prazo.split('-').reverse().join('/');
+        }
         this.setState({counter:res.length, metadia:res})
       }
       else
@@ -74,8 +76,8 @@ getMetaSemana = async () => {
 
   const currentUser = await GoogleSignin.getCurrentUser();
 
-  var datainicio = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + dt.getDate();
-  var datafim = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + (Number(dt.getDate()) + 7);
+  var datainicio = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + (String(dt.getDate()).length == 1 ? "0"+String(dt.getDate()) : (dt.getDate()));
+  var datafim = dt.getFullYear() + "-" + (String(dt.getMonth()+1).length == 1 ? "0"+String(dt.getMonth()+1) : (dt.getMonth()+1)) + "-" + (String((Number(dt.getDate()) + 7)).length == 1 ? "0"+String((Number(dt.getDate()) + 7)) : ((Number(dt.getDate()) + 7)));
 
   var condicao = " AND prazo >= '" + datainicio + "' AND prazo <= '" + datafim + "' ORDER BY prazo DESC LIMIT 2";
 
@@ -87,6 +89,9 @@ getMetaSemana = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
+        for(var i in res){
+          res[i].prazo = res[i].prazo.split('-').reverse().join('/');
+        }
         this.setState({counter:res.length, metasemana:res})
       }
       else
@@ -126,8 +131,9 @@ getMetaMes = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
-        console.log('AQUI');
-        console.log(res);
+        for(var i in res){
+          res[i].prazo = res[i].prazo.split('-').reverse().join('/');
+        }
         this.setState({counter:res.length, metames:res})
       }
       else
@@ -157,6 +163,7 @@ getMetaMes = async () => {
                     <Image style={{height:30, width:30, marginRight:30}}source={require('../images/estrelaCheiaDourada.png')}/>
                       <View style={{marginRight:20}}>
                         <Text style={{fontWeight:'bold'}}>Meta {item.id}: {item.titulo}</Text>
+                        <Text style={{fontWeight:'bold'}}>Prazo: {item.prazo}</Text>
                         <Text style={{marginBottom:20}}>Descrição {item.descricao}</Text>
                       </View>
                   </View>
@@ -183,6 +190,7 @@ getMetaMes = async () => {
                     <Image style={{height:30, width:30, marginRight:30}}source={require('../images/estrelaCheiaDourada.png')}/>
                       <View style={{marginRight:20}}>
                         <Text style={{fontWeight:'bold'}}>Meta {item.id}: {item.titulo}</Text>
+                        <Text style={{fontWeight:'bold'}}>Prazo: {item.prazo}</Text>
                         <Text style={{marginBottom:20}}>Descrição {item.descricao}</Text>
                       </View>
                   </View>
@@ -224,20 +232,28 @@ getMetaMes = async () => {
                 <Text style = {{color: 'white'}}>Ver Todas</Text>
             </View>
           </TouchableOpacity>
-          <Text style={{fontSize:26, paddingTop:"2%", color:"blue"}}>Metas para Não Cumpridas</Text>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('MetasNaoCumpridas')}>
-            <View style = {{backgroundColor: 'blue', alignItems: 'center', marginRight:15, marginTop:2,
+            <View style = {{backgroundColor: 'blue', alignItems: 'center', marginRight:15, marginTop:30,
                 justifyContent: 'center', width:largura*.8, height:altura*.05}}>
-                <Text style = {{color: 'white'}}>Acessar</Text>
+                <Text style = {{color: 'white'}}>Metas não Cumpridas</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>this.props.navigation.navigate('DefinaSuaMeta')}
-          style={{marginTop:20}}>
-            <Image source={require('../images/botaoMais.png')} style={{height:70, width:70}}/>
-            <Text style={{color: 'blue', left:-15}}>Adicionar Meta</Text> 
+
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Amigos', {idusuario: this.props.route.params.idusuario})}>
+            <View style = {{backgroundColor: 'blue', alignItems: 'center', marginRight:15, marginTop:15,
+                justifyContent: 'center', width:largura*.8, height:altura*.05}}>
+                <Text style = {{color: 'white'}}>Amigos</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('DefinaSuaMeta')}>
+            <View style = {{backgroundColor: '#33cc33', alignItems: 'center', marginRight:15, marginTop:30,
+                justifyContent: 'center', width:largura*.8, height:altura*.05}}>
+                <Text style = {{color: 'white'}}>Adicionar Meta</Text>
+            </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={()=>this.signOut() }>
-            <View style = {{backgroundColor: '#bbbbc8', alignItems: 'center', marginRight:15, marginTop:70, marginBottom:20,
+            <View style = {{backgroundColor: '#bbbbc8', alignItems: 'center', marginRight:15, marginTop:50, marginBottom:20,
                 justifyContent: 'center', width:largura*.8, height:altura*.05}}>
                 <Text style = {{color: 'black'}}>Log Out</Text>
             </View>

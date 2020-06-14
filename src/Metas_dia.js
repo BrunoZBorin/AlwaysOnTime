@@ -41,6 +41,9 @@ getMetaDiaria = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
+        for(var i in res){
+          res[i].prazo = res[i].prazo.split('-').reverse().join('/');
+        }
         this.setState({counter:res.length, metadia:res})
       }
       else
@@ -67,6 +70,7 @@ getMetaDiaria = async () => {
                   <Image style={{height:30, width:30, marginRight:30}}source={require('../images/estrelaCheiaDourada.png')}/>
                     <View style={{marginRight:20}}>
                       <Text style={{fontWeight:'bold'}}>Meta {item.id}: {item.titulo}</Text>
+                      <Text style={{fontWeight:'bold'}}>Prazo: {item.prazo}</Text>
                       <Text style={{marginBottom:20}}>Descrição {item.descricao}</Text>
                     </View>
                 </View>

@@ -79,6 +79,8 @@ render(){
          options={{ title: 'Metas para Hoje',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
          <Stack.Screen name="Metas_semana" component={Metas_semana}
          options={{ title: 'Metas para essa semana',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+         <Stack.Screen name="Amigos" component={Amigos}
+         options={{ title: 'Lista de Amigos',headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
          
       </Stack.Navigator>
     </NavigationContainer>
