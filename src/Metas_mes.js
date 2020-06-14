@@ -40,6 +40,9 @@ getMetaMes = async () => {
   await api.get('meta', { params: objAux }).then((response) => {
       if(response.data.retorno == "OK") {
         const res = response.data.dados;
+        for(var i in res){
+          res[i].prazo = res[i].prazo.split('-').reverse().join('/');
+        }
         this.setState({counter:res.length, metames:res})
       }
       else

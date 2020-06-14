@@ -17,6 +17,9 @@ import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import Login from './src/Login';
 import DrawerNavigator from './DrawerNavigator';
 import api from './src/services/api';
+import Amigos from './src/Amigos';
+import DefinaUmAmigo from './src/DefinaUmAmigo';
+import DetalhesAmigo from './src/DetalhesAmigo';
 
 GoogleSignin.configure({
   scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
@@ -38,8 +41,9 @@ function HomeScreen({ navigation, _this }) {
       }
       await api.get('usuario', {params:objAux}).then((response) => {
           if(response.data.retorno == "OK") {
-            console.log(response.data)
-            navigation.navigate('Menu')
+            console.log(response.data.dados.id_usuario)
+            this.teste = response.data.dados.id_usuario;
+            navigation.navigate('Menu', {idusuario: response.data.dados.id_usuario})
           }
           else
           {                       
@@ -117,6 +121,12 @@ function App() {
           options={{ title: "SideMenu",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
         <Stack.Screen name="EditarMeta" component={EditarMeta}
           options={{ title: "EditarMeta",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="Amigos" component={Amigos}
+          options={{ title: "Amigos",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="DefinaUmAmigo" component={DefinaUmAmigo}
+          options={{ title: "Adicionar Amigo",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
+        <Stack.Screen name="DetalhesAmigo" component={DetalhesAmigo}
+          options={{ title: "Detalhes Amigo",headerStyle: { backgroundColor: '#000000'},headerTintColor:'#FFFFFF' }}/>
 
       </Stack.Navigator>
     </NavigationContainer>

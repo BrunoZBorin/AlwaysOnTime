@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/bruno/Desktop/Protótipo/AlwaysOnTime/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/bruno/.gradle/caches/transforms-2/files-2.1/a38dce471a0e4dd70d13c7e463d72ea6/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
